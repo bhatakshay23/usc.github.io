@@ -1,0 +1,78 @@
+@import "../../../assets/styles/color";
+@import "../../../assets/styles/font";
+.upcoming-event {
+  .card {
+    padding: 25px 20px;
+    background-color: $white;
+    border: 1px solid $gray;
+    opacity: 1;
+    border-radius: 0px !important;
+  }
+  .header {
+    margin-bottom: 25px;
+    h4 {
+      margin-bottom: 0;
+      font-size: 18px;
+      letter-spacing: 0px;
+      line-height: 37px;
+      font-family: "National-Semibold";
+      svg {
+        margin-right: 5px;
+        background-color: $black;
+        color: $white;
+        padding: 5px;
+        border-radius: 14px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .content {
+    margin-bottom: 16px;
+    .post-title {
+      display: inline-flex;
+      h6 {
+        margin-bottom: 0;
+        font-size: 16px;
+        letter-spacing: 0px;
+        line-height: 19px;
+        font-family: "National-Semibold";
+      }
+      .event-time {
+        text-align: left;
+        font-family: "National-Regular";
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0px;
+        color: $dark-gray;
+        opacity: 1;
+      }
+      .avatar-image {
+        height: 26px;
+        width: 26px;
+        object-fit: cover;
+        border-radius: 14px;
+        margin-right: 10px;
+      }
+    }
+    .post-desc {
+      margin-left: 36px;
+      a {
+        text-align: left;
+        font-family: "National-Regular";
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0px;
+        color: $dark-gray;
+        opacity: 1;
+      }
+    }
+    .post-image {
+      margin-left: 36px;
+      img {
+        max-height: 140px;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+<div class="navbar-container">
+  <div class="navbar-wrapper {{ hide }}">
+    <div class="container d-flex align-items-center justify-content-between">
+      <img src="{{ logo }}" class="logo" alt="logo" />
+      <div class="tab-section">
+        <a
+          class="tab"
+          routerLink="home"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i data-feather="home" width="15" height="15"></i>
+          <span>Home</span>
+        </a>
+        <a
+          class="tab"
+          routerLink="groups"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i data-feather="users" width="15" height="15"></i>
+          <span>Groups</span>
+        </a>
+        <a
+          class="tab"
+          routerLink="library"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i data-feather="folder" width="15" height="15"></i>
+          <span>Library</span>
+        </a>
+        <a
+          class="tab"
+          routerLink="events"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i data-feather="calendar" width="15" height="15"></i>
+          <span>Events</span>
+        </a>
+        <a
+          class="tab"
+          routerLink="learn"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i data-feather="command" width="15" height="15"></i>
+          <span>Learn</span>
+        </a>
+      </div>
+      <div class="options-section d-flex align-items-center">
+        <div class="notification">
+          <i data-feather="bell" width="13" height="14"></i>
+          <span class="notification-count">{{ notificationCount }}</span>
+        </div>
+        <div class="profile">
+          <img class="profile-img" src="{{ profileImg }}" alt="profile" />
+          <div class="profile-account" (click)="toggleOptions()">
+            <span>{{ profileName }}</span>
+            <i data-feather="chevron-down" width="15" height="15"></i>
+          </div>
+          <div *ngIf="showOptions" class="profile-options">
+            <a href="#">View Profile</a>
+            <a href="#">Help</a>
+            <a href="#">Manage</a>
+            <a href="#">Private Settings</a>
+            <a href="#">Signout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

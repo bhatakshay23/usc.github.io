@@ -1,0 +1,14 @@
+@import "../../../assets/styles/color";
+@import "../../../assets/styles/variables";
+
+.text-input {
+  @include fontProperty($n-regular, 12px, null);
+  background-color: $alabaster;
+  border: 1px solid $gallery;
+  border-radius: 18px;
+  padding: 10px 20px;
+  width: 100%;
+  &::placeholder {
+    color: $light-gray;
+  }
+}

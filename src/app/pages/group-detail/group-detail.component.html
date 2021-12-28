@@ -1,0 +1,67 @@
+<div class="top-banner">
+  <app-top-banner></app-top-banner>
+</div>
+
+<div class="container group-detail-wrapper">
+  <!-- <div class="col-md-12"> -->
+  <!-- </div> -->
+  <div class="row">
+    <!-- LEFT SECTION -->
+    <div class="col-md-3">
+      <div class="left-component">
+        <!-- Groups component -->
+        <app-groups></app-groups>
+        <div class="left-footer-comp">
+          <app-left-footer></app-left-footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- CENTER SECTION -->
+    <div class="col-md-6">
+      <!-- Group info component -->
+      <div class="group-info-wrapper">
+        <app-group-info></app-group-info>
+      </div>
+
+      <!-- Create post component -->
+      <div class="create-post-wrapper">
+        <app-create-post [groupDetail]="true" [title]="title"></app-create-post>
+      </div>
+
+      <p class="recent-post-label">RECENT POSTS</p>
+
+      <!-- Group components with image -->
+      <div class="post-wrapper">
+        <div class="post-wrapper">
+          <app-recent-post
+            [groupInfo]="groupData2"
+            [postWithImg]="true"
+          ></app-recent-post>
+        </div>
+        
+        <app-recent-post
+          [groupInfo]="groupData"
+          [postWithImg]="true"
+        ></app-recent-post>
+      </div>
+
+      <div class="post-wrapper">
+        <app-recent-post
+          [groupInfo]="groupData3"
+          [postWithImg]="true"
+        ></app-recent-post>
+      </div>
+    </div>
+
+    <!-- RIGHT SECTION-->
+    <div class="col-md-3">
+      <div class="right-section">
+        <app-create-group></app-create-group>
+      </div>
+      <div class="right-section">
+        <app-upcoming-events></app-upcoming-events>
+      </div>
+    </div>
+  </div>
+</div>

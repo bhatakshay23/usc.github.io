@@ -1,0 +1,21 @@
+.btn-yellow {
+  background-color: #ffcc00;
+  color: #000;
+  border: unset;
+  border-radius: unset;
+  height: 50px;
+  font-family: "National-Semibold";
+  font-size: 18px;
+  line-height: 21px;
+  padding: 15px;
+  &.small-btn {
+    padding: 10px 40px;
+    font-size: 16px;
+    line-height: 19px;
+    height: auto;
+  }
+  &:hover {
+    text-decoration: underline;
+    color: #9a211d;
+  }
+}

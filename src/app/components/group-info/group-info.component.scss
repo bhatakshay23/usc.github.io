@@ -1,0 +1,111 @@
+@import "../../../assets/styles/color";
+@import "../../../assets/styles/variables";
+$max: 50;
+.group-info-wrapper {
+  .title {
+    @include fontProperty($n-semibold, 28px, 33px);
+  }
+  .member-info {
+    display: flex;
+    color: $light-gray;
+    margin-bottom: 8px;
+    svg {
+      fill: $light-gray;
+      margin-right: 4px;
+    }
+    span {
+      @include fontProperty($n-regular, 12px, 15px);
+    }
+  }
+  .group-members {
+    display: flex;
+
+    .group {
+      display: flex;
+
+      .people {
+        position: relative;
+        @for $i from 1 through $max {
+          &:nth-child(#{$i}) {
+            transform: translateX(-#{5 * $i}px);
+          }
+        }
+
+        img {
+          width: 28px;
+          height: 28px;
+          border-radius: 20px;
+          object-fit: cover;
+          border: 1px solid $alabaster;
+        }
+
+        &:last-child {
+          &::before {
+            content: "";
+            position: absolute;
+            width: 28px;
+            height: 28px;
+            top: 0;
+            left: 0;
+            background-color: $black;
+            opacity: 0.72;
+            border-radius: 20px;
+            border: 1px solid $alabaster;
+          }
+          &::after {
+            content: "...";
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 100%;
+            color: $white;
+            text-align: center;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .status {
+      position: absolute;
+      right: 16px;
+      color: $dark-gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .checked {
+        width: 17px;
+        height: 17px;
+        background-color: $dark-gray;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          color: $white;
+        }
+      }
+      span {
+        @include fontProperty($n-medium, 14px, 16px);
+        margin: 0 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  .divider {
+    height: 1px;
+    width: 100%;
+    background-color: $mercury;
+    margin: 20px 0px 8px 0px;
+  }
+  .about {
+    span {
+      @include fontProperty($n-medium, 14px, 16px);
+      margin-bottom: 5px;
+    }
+    p {
+      @include fontProperty($n-regular, 14px, 16px);
+      color: $light-gray;
+      margin: 0;
+    }
+  }
+}

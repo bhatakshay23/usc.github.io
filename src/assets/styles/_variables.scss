@@ -1,0 +1,34 @@
+$n-black: "National-Black";
+$n-blacki: "National-BlackItalic";
+
+$n-bold: "National-Bold";
+$n-boldi: "National-BoldItalic";
+
+$n-book: "National-Book";
+$n-booki: "National-BookItalic";
+
+$n-extrabold: "National-Extrabold";
+$n-extraboldi: "National-ExtraboldItalic";
+
+$n-light: "National-Light";
+$n-lighti: "National-LightItalic";
+
+$n-medium: "National-Medium";
+$n-mediumi: "National-MediumItalic";
+
+$n-regular: "National-Regular";
+$n-regulari: "National-RegularItalic";
+
+$n-semibold: "National-Semibold";
+$n-semiboldi: "National-SemiboldItalic";
+
+$n-thin: "National-Thin";
+$n-thini: "National-ThinItalic";
+
+$nav-height: 70px;
+
+@mixin fontProperty($family, $size, $height) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $height;
+}

@@ -1,0 +1,39 @@
+@import "../../../assets/styles/color";
+@import "../../../assets/styles/font";
+.create-group {
+  .card {
+    padding: 7px 25px;
+    border-radius: unset !important;
+    border: 1px solid $gray;
+    .card-body {
+      text-align: center;
+      .group-img {
+        margin-bottom: 10px;
+        svg {
+          margin-right: 5px;
+          background-color: $black;
+          color: $white;
+          padding: 15px;
+          border-radius: 50%;
+          margin-bottom: 5px;
+        }
+      }
+      .group-title {
+        margin-bottom: 16px;
+        h4 {
+          font-family: "National-Medium";
+          font-size: 18px;
+          font-family: 16px;
+          margin-bottom: 3px;
+        }
+        p {
+          color: $light-gray;
+          font-family: "National-Medium";
+          font-size: 14px;
+          line-height: 16px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

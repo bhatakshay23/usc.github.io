@@ -1,0 +1,35 @@
+.left-footer {
+  .tag-line {
+    margin-top: 50px;
+    width: 70%;
+    p {
+      font-family: "ACaslonPro-Bold";
+      color: #cccccc;
+      text-align: left;
+      font-size: 31px;
+      line-height: 31px;
+    }
+  }
+  .footer-links {
+    .btn-link {
+      padding: 0;
+      font-family: "National-Medium";
+      letter-spacing: 0.48px;
+      text-transform: uppercase;
+      opacity: 1;
+      background-color: transparent;
+      color: #000;
+      border: unset;
+      border-radius: unset;
+      font-size: 12px;
+      line-height: 16px;
+      text-decoration: underline;
+      &:hover {
+        color: #ffcc00;
+      }
+    }
+    app-button-link {
+      margin-right: 15px;
+    }
+  }
+}

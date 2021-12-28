@@ -1,0 +1,20 @@
+@import "~bootstrap/scss/bootstrap";
+@import "/src/assets/styles/font";
+@import "/src/assets/styles/color";
+
+@font-face {
+  font-family: National-Medium;
+  src: url(assets/fonts/National-Medium.otf) format("opentype");
+}
+@font-face {
+  font-family: National-Semibold;
+  src: url(assets/fonts/National-Semibold.otf) format("opentype");
+}
+@font-face {
+  font-family: ACaslonPro-Bold;
+  src: url(assets/fonts/ACaslonPro-Bold.otf) format("opentype");
+}
+
+body {
+  background-color: #fff;
+}

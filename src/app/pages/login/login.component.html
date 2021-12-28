@@ -1,0 +1,57 @@
+<div class="container-fluid login">
+  <div class="row">
+    <div class="col col-md-6">
+      <div class="hero-img">
+        <img src="{{ heroImg }}" alt="" />
+      </div>
+    </div>
+    <div class="col col-md-6">
+      <div class="login-container">
+        <div class="logo-div">
+          <img src="{{ heroLogo }}" alt="" />
+        </div>
+        <div class="sign-in mb-4">
+          <p>SIGN IN</p>
+        </div>
+        <form>
+          <div class="mb-4">
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Username"
+              />
+            </div>
+          </div>
+          <div class="mb-2">
+            <div class="form-group">
+              <input
+                type="password"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+          <div class="mb-4">
+            <app-button-link [buttonConfig]="forgotpassBtnConfig">
+            </app-button-link>
+          </div>
+          <div class="mb-5">
+            <div class="form-group">
+              <!-- <a routerLink="/usc/home"> -->
+                <app-button-black
+                  [buttonConfig]="textBtnConfig"
+                ></app-button-black>
+              <!-- </a> -->
+            </div>
+          </div>
+        </form>
+        <div class="tag-line">
+          <p>Your Tagline here</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,256 @@
+@import "../../../assets/styles/color";
+@import "../../../assets/styles/variables";
+
+.recent-post-container {
+  border-radius: unset !important;
+  border: 1px solid $gray;
+  .group {
+    margin-bottom: 13px;
+    .group-usr {
+      font-family: $n-semibold;
+    }
+    .group-usr,
+    .post-usr {
+      font-size: 12px;
+      color: $dark-gray;
+      line-height: normal;
+    }
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .group-section {
+      position: relative;
+      .group-img {
+        height: 37px;
+        width: 37px;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+      .user-img {
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 25px;
+        border: 1px solid $mercury3;
+        bottom: -1px;
+        right: -4px;
+        object-fit: cover;
+      }
+    }
+    img {
+      width: 36px;
+      height: 36px;
+      border-radius: 20px;
+      margin-right: 10px;
+    }
+    &-desc {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      p {
+        @include fontProperty($n-semibold, 14px, null);
+        margin: 0;
+      }
+      span {
+        @include fontProperty($n-regular, 12px, null);
+        color: $light-gray;
+      }
+    }
+    .options-wrapper {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0px;
+      .three-dot {
+        height: 23px;
+        width: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        cursor: pointer;
+        &.active {
+          background-color: $light-gray;
+        }
+        span {
+          width: 3px;
+          height: 3px;
+          background-color: $dark-gray;
+          border-radius: 50%;
+          &:not(:last-child) {
+            margin-right: 2px;
+          }
+        }
+      }
+      .options {
+        position: absolute;
+        top: 33px;
+        right: -2px;
+        box-shadow: 0px 3px 6px $mercury2;
+        padding: 10px 15px;
+        background-color: $white;
+        min-width: 146px;
+        &::before {
+          content: "";
+          box-shadow: 1px -1px 2px 0px #0000000f;
+          right: 7px;
+          background-color: $white;
+          display: block;
+          height: 12px;
+          position: absolute;
+          top: -6px;
+          transform: rotate(-45deg);
+          width: 12px;
+        }
+        .item {
+          display: flex;
+          cursor: pointer;
+          align-items: center;
+          span {
+            margin-left: 10px;
+            @include fontProperty($n-regular, 14px, 17px);
+          }
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  .post-desc {
+    margin: 7px 0 10px 0;
+    @include fontProperty($n-regular, 14px, 17px);
+  }
+  .post-img {
+    width: 100%;
+    height: 248px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  .meta-url {
+    font-family: $n-regular;
+    color: $black;
+  }
+  .post-link {
+    width: 100%;
+    background-color: $alabaster2;
+    padding: 7px;
+    margin-bottom: 15px;
+    .meta-img {
+      width: 92px;
+      height: 54px;
+      object-fit: cover;
+      margin-right: 15px;
+    }
+    .meta-desc {
+      display: flex;
+      flex-direction: column;
+      margin-top: 5px;
+      span {
+        @include fontProperty($n-semibold, 14px, 17px);
+      }
+      .meta-url {
+        @include fontProperty(null, 12px, 15px);
+      }
+    }
+  }
+  .post-poll {
+    padding: 10px 0px 15px 0px;
+    .poll-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      width: 100%;
+      .custom-check {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        user-select: none;
+        padding-left: 35px;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+          &:checked ~ .checkmark {
+            background-color: $black;
+            border: 1px solid $black;
+            &::after {
+              display: block;
+            }
+          }
+        }
+        .checkmark {
+          position: absolute;
+          top: -8px;
+          left: 0;
+          height: 15px;
+          width: 15px;
+          border-radius: 2px;
+          background-color: $white;
+          border: 1px solid $light-gray;
+          &::after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 1px;
+            top: 2px;
+            width: 11px;
+            height: 6px;
+            border: solid $white;
+            border-width: 0px 0px 2px 2px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+      .poll-text {
+        @include fontProperty($n-semibold, 14px, 17px);
+        background-color: $alabaster2;
+        padding: 10px;
+        width: 100%;
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    color: $dark-gray;
+    align-items: center;
+    .action {
+      display: flex;
+      .item {
+        margin-right: 30px;
+        cursor: pointer;
+        span {
+          @include fontProperty($n-regular, 14px, 17px);
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .count {
+    @include fontProperty($n-regular, 14px, 17px);
+  }
+  .comment-section {
+    border-top: 1px solid $mercury;
+    padding-top: 20px;
+    margin-top: 10px;
+    .comment-item {
+      margin-top: 10px;
+      .comment-content {
+        margin-left: 46px;
+        .footer {
+          padding-bottom: 10px;
+          border-bottom: 1px solid $mercury;
+        }
+      }
+    }
+  }
+  .new-comment {
+    padding-top: 15px;
+  }
+}

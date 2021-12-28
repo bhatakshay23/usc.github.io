@@ -1,0 +1,70 @@
+@import "../../../assets/styles/color";
+@import "../../../assets/styles/variables";
+.card {
+  border: 1px solid $gray;
+  border-radius: 0px;
+  overflow-x: hidden;
+}
+.box {
+  overflow-y: scroll;
+}
+.search-box {
+  margin-bottom: 11px;
+  padding: 0;
+}
+.search-icon {
+  color: $dark-gray;
+  position: absolute;
+  top: 76px;
+  left: 21px;
+}
+.group-container {
+  .image {
+    border-radius: 50%;
+    opacity: 1;
+    height: 47px;
+    img {
+      width: 26px;
+      height: 26px;
+      border-radius: 20px;
+      margin-right: 10px;
+    }
+  }
+  .header-text {
+    color: $black;
+    text-transform: uppercase;
+    opacity: 1;
+    padding: 0;
+    margin-top: 8px;
+    @include fontProperty($n-medium, 18px, 17px);
+  }
+  .group-item {
+    margin-bottom: 10px;
+    display: inline-flex;
+  }
+  .group-item-text {
+    opacity: 1;
+    @include fontProperty($n-medium, 14px, 17px);
+    color: $black;
+    p {
+      margin-bottom: 0;
+    }
+    svg {
+      color: $light-gray;
+      fill: $light-gray;
+    }
+    span {
+      @include fontProperty($n-medium, 12px, 15px);
+      color: $light-gray;
+      text-transform: capitalize;
+    }
+  }
+  .more-text {
+    @include fontProperty($n-medium, 12px, 16px);
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: $black;
+    margin-top: 15px;
+    margin-bottom: 9px;
+  }
+}

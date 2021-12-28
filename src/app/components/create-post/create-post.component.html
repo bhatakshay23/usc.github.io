@@ -1,0 +1,28 @@
+<div class="create-post-container card">
+  <div class="card-body">
+    <p>{{ title }}</p>
+    <div class="text-wrapper d-flex">
+      <img src="{{ profileImg }}" alt="profileImg" />
+      <div class="text-section">
+        <textarea name="desc" placeholder="Share your thoughts"></textarea>
+        <div class="action-section d-flex justify-content-between">
+          <div class="action d-flex">
+            <div class="item">
+              <i data-feather="image" width="15" height="15"></i>
+            </div>
+            <div class="item">
+              <i data-feather="video" width="15" height="15"></i>
+            </div>
+            <div class="item">
+              <i data-feather="link" width="15" height="15"></i>
+            </div>
+            <div class="item" *ngIf="groupDetail">
+              <i data-feather="bar-chart-2" width="15" height="15"></i>
+            </div>
+          </div>
+          <app-button-yellow [buttonConfig]="textBtnConfig"></app-button-yellow>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

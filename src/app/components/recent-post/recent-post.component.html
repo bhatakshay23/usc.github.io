@@ -1,0 +1,204 @@
+<div class="recent-post-container card">
+  <div class="card-body">
+    <!-- Post & Group Profile Name & Image -->
+    <div class="profile" [ngClass]="{ group: groupInfo }">
+      <!-- Post -->
+      <div *ngIf="postInfo">
+        <img src="{{ postInfo.profileImg }}" alt="profileImg" />
+      </div>
+      <!-- Group -->
+      <a [routerLink]="['group-detail']">
+        <div *ngIf="groupInfo" class="group-section">
+          <img
+            class="group-img"
+            src="{{ groupInfo.groupImg }}"
+            alt="groupImg"
+          />
+          <img
+            class="user-img"
+            src="{{ groupInfo.userImg }}"
+            alt="profileImg"
+          />
+        </div>
+      </a>
+      <!-- Post & Group name details -->
+      <div class="profile-desc">
+        <p>
+          {{ postInfo && postInfo.profileName }}
+          {{ groupInfo && groupInfo.groupName }}
+        </p>
+        <div class="d-flex">
+          <span *ngIf="groupInfo" class="group-usr"
+            >{{ groupInfo.userName }} •
+          </span>
+          &nbsp;
+          <span class="post-usr">
+            {{ groupInfo && groupInfo.postDate }}
+            {{ postInfo && postInfo.postDate }}
+          </span>
+        </div>
+      </div>
+      <!-- Option -->
+      <div class="options-wrapper">
+        <div
+          class="three-dot"
+          (click)="toggleOptions()"
+          [ngClass]="{ active: showOptions }"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="options" [ngClass]="{ 'd-none': !showOptions }">
+          <div class="item">
+            <i data-feather="edit" width="15" height="15"></i>
+            <span>Edit</span>
+          </div>
+          <div class="item">
+            <i data-feather="delete" width="15" height="15"></i>
+            <span>Delete</span>
+          </div>
+          <div class="item">
+            <i data-feather="flag" width="15" height="15"></i>
+            <span>Report this post</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Profile - Post with description -->
+    <div *ngIf="postInfo">
+      <p class="post-desc">
+        {{ postInfo && postInfo.postDesc }}
+        <br />
+        <a
+          *ngIf="postWithLink"
+          class="meta-url"
+          href="{{ postInfo.metaURL }}"
+          >{{ postInfo.metaURL }}</a
+        >
+      </p>
+    </div>
+    <!-- Post with Image -->
+    <div *ngIf="postInfo">
+      <img
+        *ngIf="postWithImg"
+        class="post-img"
+        src="{{ postInfo.postImg }}"
+        alt="postImg"
+      />
+    </div>
+    <div *ngIf="groupInfo">
+      <img
+        *ngIf="postWithImg"
+        class="post-img"
+        src="{{ groupInfo.postImg }}"
+        alt="groupImg"
+      />
+    </div>
+    <!-- Group - Post with description -->
+    <div *ngIf="groupInfo">
+      <p class="post-desc">
+        {{ groupInfo.postDesc }}
+        <br />
+        <a
+          *ngIf="postWithLink"
+          class="meta-url"
+          href="{{ postInfo.metaURL }}"
+          >{{ postInfo.metaURL }}</a
+        >
+      </p>
+    </div>
+    <!-- Post with URL -->
+    <div *ngIf="postWithLink" class="post-link d-flex">
+      <img class="meta-img" src="{{ postInfo.metaImg }}" alt="metaImg" />
+      <div class="meta-desc">
+        <span>{{ postInfo.metaTitle }}</span>
+        <a class="meta-url" href="{{ postInfo.metaURL }}">{{
+          postInfo.metaURL
+        }}</a>
+      </div>
+    </div>
+    <!-- Post with Poll -->
+    <div *ngIf="poll" class="post-poll">
+      <div *ngFor="let item of poll">
+        <div class="poll-item">
+          <label class="custom-check">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+          <div class="poll-text">{{ item }}</div>
+        </div>
+      </div>
+    </div>
+    <!-- Post footer with like, comment & share -->
+    <div class="footer">
+      <div class="action">
+        <div class="item">
+          <i data-feather="thumbs-up" width="15" height="15"></i>
+          <span>Like</span>
+        </div>
+        <div class="item" (click)="toggleComment()">
+          <i data-feather="message-square" width="15" height="15"></i>
+          <span>Comment</span>
+        </div>
+        <div class="item">
+          <i data-feather="share-2" width="15" height="15"></i>
+          <span>Share</span>
+        </div>
+      </div>
+      <span class="count">
+        <span *ngIf="commentCount">{{ commentCount }} Comments • </span>
+        {{ groupInfo && groupInfo.likesCount }}
+        {{ postInfo && postInfo.likesCount }} Likes</span
+      >
+    </div>
+    <!-- Comment seciton -->
+    <div *ngIf="showComment" class="comment-section">
+      <!-- Comments data array renders here -->
+      <div *ngFor="let item of comment">
+        <div class="comment-item">
+          <!-- comment profile -->
+          <div class="profile">
+            <img src="{{ item.commenterImg }}" alt="profileImg" />
+            <div class="profile-desc">
+              <p>{{ item.commenterName }}</p>
+              <span>{{ item.commentDate }}</span>
+            </div>
+          </div>
+          <!-- comment contnet -->
+          <div class="comment-content">
+            <p class="post-desc">
+              {{ item.commentText }}
+            </p>
+            <div class="footer">
+              <div class="action">
+                <div class="item">
+                  <i data-feather="thumbs-up" width="15" height="15"></i>
+                  <span>Like</span>
+                </div>
+                <div class="item">
+                  <i data-feather="message-square" width="15" height="15"></i>
+                  <span>Reply</span>
+                </div>
+                <div class="item">
+                  <i data-feather="flag" width="15" height="15"></i>
+                  <span>Report</span>
+                </div>
+              </div>
+              <span class="count">{{ item.commentLikes }} Likes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Comment quote -->
+      <div class="new-comment">
+        <div class="profile">
+          <img src="{{ postInfo.profileImg }}" alt="profileImg" />
+          <div class="profile-desc">
+            <app-text-input placeholder="Write a comment"></app-text-input>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+@import "../../../assets/styles/color";
+@import "../../../assets/styles/variables";
+.card {
+  border: 1px solid $gray;
+  border-radius: 0px !important;
+}
+.profile {
+  display: flex;
+
+  .image {
+    border-radius: 50%;
+    opacity: 1;
+    margin-right: 10px;
+    img {
+      border: 5px solid $supernova;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  .text {
+    span {
+      @include fontProperty($n-medium, 18px, 21px);
+      color: $black;
+    }
+    p {
+      @include fontProperty($n-regular, 14px, 16px);
+      color: $dark-gray;
+      margin-bottom: 0;
+    }
+    a {
+      text-decoration: underline;
+      @include fontProperty($n-medium, 12px, 16px);
+      color: $black;
+      text-transform: uppercase;
+    }
+  }
+}

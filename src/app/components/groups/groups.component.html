@@ -1,0 +1,35 @@
+<div class="card">  
+  <div class="card-body row group-container">
+    <div class="d-flex">
+      <div class="image">
+        <img src="{{ avatar }}" />
+      </div>
+      <div class="header-text">
+        <p>GROUPS YOU’VE JOINED</p>
+      </div>
+    </div>
+    <div *ngIf="groups" class="search-box">
+      <i class="search-icon" data-feather="search" width="10.67" height="10.67" ></i>
+      <app-text-input placeholder="    Search group by name..."  (searchString)="setSearchString($event) " class="search-text"></app-text-input>
+    </div>
+    <div class="box" [ngStyle]="{'height': groups ? '282px' : 'auto', 'overflow-y': groups && flag? 'scroll':'hidden'}">
+      <div *ngFor="let group of filteredGroups" class="image">
+        <div class="group-item">
+          <img src="{{ group.image }}" />
+          <div class="group-item-text">
+            <p>{{ group.title }}</p>
+            <i data-feather="users" width="13" height="8"></i>
+            <span>{{ group.members }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="groups" class="more-text">
+      <!-- <app-button-link [buttonConfig]="moreText">+32 more</app-button-link> -->
+      <button [ngStyle]="{'display': flag ? 'none' : 'block'}" (click)="showMore()">+32 more</button>
+    </div>
+    <div *ngIf="!groups">
+      <app-button-link [buttonConfig]="groupMemberText"></app-button-link>
+    </div>
+  </div>
+</div>

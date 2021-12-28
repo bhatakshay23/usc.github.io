@@ -1,0 +1,72 @@
+@import "../../../../assets/styles/color";
+@import "../../../../assets/styles/font";
+.feedback-modal {
+  .modal-body {
+    padding: 50px 40px 40px 40px;
+    .header {
+      h3 {
+        font-size: 22px;
+        line-height: 37px;
+        font-family: "National-Semibold";
+        svg {
+          margin-right: 5px;
+          background-color: $black;
+          color: $white;
+          padding: 5px;
+          border-radius: 14px;
+          margin-bottom: 1px;
+        }
+      }
+    }
+    .content {
+      margin-bottom: 25px;
+      .btn-group {
+        label {
+          font-size: 14px;
+          line-height: 17px;
+          font-family: "National-Regular";
+          text-align: left;
+          margin-bottom: 4px;
+          color: $black;
+          input {
+            margin-right: 10px;
+            border-color: $light-gray;
+            &:checked {
+              background-color: $black;
+              border-color: $black;
+            }
+            &:focus {
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+    .feedback-div {
+      margin-bottom: 20px;
+      label {
+        font-size: 14px;
+        line-height: 16px;
+        font-family: "National-Regular";
+        color: $dark-gray;
+        text-align: left;
+        input {
+          height: 120px;
+          border-radius: 8px;
+          border-color: $gray;
+          background-color: $alabaster;
+          &:focus {
+            border-color: $gray;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+    .footer {
+      justify-content: flex-end;
+      app-button-yellow {
+        margin-right: 12px;
+      }
+    }
+  }
+}

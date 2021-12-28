@@ -1,0 +1,18 @@
+<div class="left-footer">
+  <div class="tag-line">
+    <p>Your Tagline here</p>
+  </div>
+  <div class="logo-footer">
+    <img src="{{ logoImage }}" alt="" />
+  </div>
+  <div class="footer-links">
+    <div>
+      <button class="btn-link" (click)="open()">FEEDBACK</button>
+    </div>
+    <div>
+      <app-button-link [buttonConfig]="linkTextTerms"></app-button-link>
+      <app-button-link [buttonConfig]="linkTextPolicy"></app-button-link>
+      <app-button-link [buttonConfig]="linkTextConduct"></app-button-link>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,112 @@
+@import "../../../assets/styles/color";
+@import "../../../assets/styles/variables";
+
+.navbar-container {
+  width: 100%;
+  height: $nav-height;
+  .navbar-wrapper {
+    background-color: $black;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    .container {
+      height: $nav-height;
+      .logo {
+        max-width: 260px;
+      }
+      .tab-section {
+        display: flex;
+        align-self: stretch;
+        .tab {
+          @include fontProperty($n-semibold, 16px, 19px);
+          color: $white;
+          text-decoration: none;
+          padding: 0 15px;
+          display: flex;
+          align-items: center;
+          border-bottom: 4px solid $black;
+          &.active {
+            color: $supernova;
+            border-bottom: 4px solid $supernova;
+          }
+          svg {
+            margin-right: 7px;
+          }
+        }
+      }
+      .options-section {
+        .notification {
+          height: 40px;
+          width: 40px;
+          border-radius: 20px;
+          background-color: $mine-shaft;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          margin-right: 15px;
+          svg {
+            color: $white;
+          }
+          &-count {
+            @include fontProperty($n-regular, 12px, null);
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 14px;
+            width: auto;
+            background-color: $white;
+            border-radius: 9px;
+            padding: 0 4px;
+            display: flex;
+            align-items: center;
+          }
+        }
+        .profile {
+          display: flex;
+          align-items: center;
+          position: relative;
+          &-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            margin-right: 8px;
+          }
+          &-account {
+            cursor: pointer;
+            svg {
+              color: $white;
+            }
+            span {
+              color: $white;
+              @include fontProperty($n-semibold, 16px, 19px);
+              margin-right: 5px;
+            }
+          }
+          &-options {
+            position: absolute;
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+            top: 47px;
+            padding: 15px 10px;
+            border-radius: 6px 0px 6px 6px;
+            box-shadow: 0px 3px 6px $mercury2;
+            width: 156px;
+            right: 0;
+            a {
+              text-decoration: none;
+              color: $black;
+              @include fontProperty($n-regular, 14px, 17px);
+              &:not(:last-child) {
+                margin-bottom: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

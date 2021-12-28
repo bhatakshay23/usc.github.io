@@ -1,0 +1,85 @@
+<!-- <app-group-post [groupPostConfig]="{}"></app-group-post> -->
+
+<div class="container home-wrapper">
+  <div class="row">
+    <!-- LEFT SECTION -->
+    <div class="col-md-3">
+      <div class="left-component">
+        <div>
+          <!-- Profile component -->
+          <div class="profile-wrapper">
+            <app-profile></app-profile>
+          </div>
+          <!-- Groups component -->
+          <app-groups [count]="3" ></app-groups>
+        </div>
+        <div class="left-footer-comp">
+          <app-left-footer></app-left-footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- CENTER SECTION -->
+    <div class="col-md-6">
+      <!-- Banner component -->
+      <div class="banner-wrapper">
+        <app-banner></app-banner>
+      </div>
+
+      <!-- Create post component -->
+      <div class="create-post-wrapper">
+        <app-create-post [title]="title"></app-create-post>
+      </div>
+
+      <p class="recent-post-label">RECENT POSTS</p>
+
+      <!-- Post component with image -->
+      <div class="post-wrapper">
+        <app-recent-post
+          [postInfo]="postData"
+          [postWithImg]="true"
+        ></app-recent-post>
+      </div>
+
+      <!-- Post component with Link -->
+      <div class="post-wrapper">
+        <app-recent-post
+          [postInfo]="postData"
+          [postWithLink]="true"
+        ></app-recent-post>
+      </div>
+
+      <!-- Post component with poll-->
+      <div class="post-wrapper">
+        <app-recent-post
+          [postInfo]="postData"
+          [poll]="pollData"
+        ></app-recent-post>
+      </div>
+
+      <!-- Post component with text -->
+      <div class="post-wrapper">
+        <app-recent-post [postInfo]="postData"></app-recent-post>
+      </div>
+
+      <!-- Post component with image & comment -->
+      <div class="post-wrapper">
+        <app-recent-post
+          [postInfo]="postData"
+          [postWithImg]="true"
+          [comment]="commentData"
+        ></app-recent-post>
+      </div>
+    </div>
+
+    <!-- RIGHT SECTION-->
+    <div class="col-md-3">
+      <div class="right-section">
+        <app-group-post></app-group-post>
+      </div>
+      <div class="right-section">
+        <app-upcoming-events></app-upcoming-events>
+      </div>
+    </div>
+  </div>
+</div>

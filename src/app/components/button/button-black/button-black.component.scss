@@ -1,0 +1,14 @@
+.btn-black {
+  background-color: #000;
+  color: #fff;
+  border: unset;
+  border-radius: unset;
+  height: 50px;
+  font-family: "National-Semibold";
+  font-size: 18px;
+  line-height: 21px;
+  &:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+  }
+}

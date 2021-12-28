@@ -1,0 +1,80 @@
+<div class="group-modal">
+  <div class="modal-body">
+    <div class="row">
+      <div class="modal-img col-6">
+        <img src="{{ image }}" alt="" />
+      </div>
+      <div class="form-div col-6">
+        <div class="content">
+          <div class="header">
+            <h4>
+              <i
+                data-feather="users"
+                width="26"
+                height="26"
+                bg-color="#000"
+              ></i>
+              Create New Group
+            </h4>
+          </div>
+          <form action="">
+            <div class="form-group">
+              <label for="name" class="form-control-label">Group Title</label>
+              <input
+                class="form-control"
+                placeholder=" Enter Group Title"
+                type="text"
+                name="name"
+                id="name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="name" class="form-control-label">Cover Image</label>
+              <div class="img-upload">
+                <i
+                  data-feather="upload-cloud"
+                  width="33"
+                  height="33"
+                  bg-color="#000"
+                ></i>
+                <div *ngIf="fileUploaded; else elseBlock">
+                  {{ fileName }}
+                </div>
+                <ng-template #elseBlock
+                  ><div>Click here to upload</div></ng-template
+                >
+              </div>
+              <input
+                class="form-control"
+                type="file"
+                name="name"
+                id="name"
+                accept="image/*"
+                (change)="onFileUpload($event)"
+              />
+            </div>
+            <div class="form-group">
+              <label for="name" class="form-control-label"
+                >Invite Members</label
+              >
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Enter names or Email address"
+                name="name"
+                id="name"
+              />
+            </div>
+            <div class="form-group">
+              <div class="button-div">
+                <app-button-yellow
+                  [buttonConfig]="createGroupText"
+                ></app-button-yellow>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

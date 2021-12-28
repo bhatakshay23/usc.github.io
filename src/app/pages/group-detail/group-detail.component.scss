@@ -1,0 +1,22 @@
+@import "../../../assets/styles/color";
+@import "../../../assets/styles/variables";
+.top-banner {
+  margin-bottom: 36px;
+}
+.group-detail-wrapper {
+  .profile-wrapper,
+  .banner-wrapper,
+  .create-post-wrapper,
+  .post-wrapper,
+  .group-info-wrapper {
+    margin-bottom: 30px;
+  }
+  .recent-post-label {
+    color: $dark-gray;
+    @include fontProperty($n-semibold, 14px, 17px);
+    margin-bottom: 10px;
+  }
+  .right-section {
+    margin-bottom: 30px;
+  }
+}

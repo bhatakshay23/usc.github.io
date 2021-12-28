@@ -1,0 +1,145 @@
+<div class="feedback-modal">
+  <div class="modal-body">
+    <div class="header">
+      <h3>
+        <i
+          data-feather="alert-circle"
+          width="26"
+          height="26"
+          bg-color="#000"
+        ></i
+        >FEEDBACK
+      </h3>
+    </div>
+    <div class="content row">
+      <div
+        class="btn-group btn-group-toggle col-md-12"
+        ngbRadioGroup
+        name="radioBasic"
+      >
+        <label ngbButtonLabel class="col-md-3">
+          <input
+            ngbButton
+            type="radio"
+            [value]="5"
+            class="form-check-input"
+          />Sample subject 1
+        </label>
+        <label ngbButtonLabel class="col-md-3">
+          <input
+            ngbButton
+            type="radio"
+            value="6"
+            class="form-check-input"
+          />Sample subject 2
+        </label>
+        <label ngbButtonLabel class="col-md-3">
+          <input
+            ngbButton
+            type="radio"
+            [value]="7"
+            class="form-check-input"
+          />Sample subject 3
+        </label>
+        <label ngbButtonLabel class="col-md-3">
+          <input
+            ngbButton
+            type="radio"
+            [value]="8"
+            class="form-check-input"
+          />Sample subject 4
+        </label>
+      </div>
+      <div
+        class="btn-group btn-group-toggle col-md-12"
+        ngbRadioGroup
+        name="radioBasic"
+      >
+        <label ngbButtonLabel class="col-md-3">
+          <input
+            ngbButton
+            type="radio"
+            [value]="9"
+            class="form-check-input"
+          />Sample subject 5
+        </label>
+        <label ngbButtonLabel class="col-md-3">
+          <input
+            ngbButton
+            type="radio"
+            value="10"
+            class="form-check-input"
+          />Sample subject 6
+        </label>
+        <label ngbButtonLabel class="col-md-3">
+          <input
+            ngbButton
+            type="radio"
+            [value]="11"
+            class="form-check-input"
+          />Sample subject 7
+        </label>
+        <label ngbButtonLabel class="col-md-3">
+          <input
+            ngbButton
+            type="radio"
+            [value]="12"
+            class="form-check-input"
+          />Sample subject 8
+        </label>
+      </div>
+      <div
+        class="btn-group btn-group-toggle col-md-12"
+        ngbRadioGroup
+        name="radioBasic"
+      >
+        <label ngbButtonLabel class="col-md-3">
+          <input
+            ngbButton
+            type="radio"
+            [value]="1"
+            class="form-check-input"
+          />Sample subject 9
+        </label>
+        <label ngbButtonLabel class="col-md-3">
+          <input
+            ngbButton
+            type="radio"
+            value="2"
+            class="form-check-input"
+          />Sample subject 10
+        </label>
+        <label ngbButtonLabel class="col-md-3">
+          <input
+            ngbButton
+            type="radio"
+            [value]="3"
+            class="form-check-input"
+          />Sample subject 11
+        </label>
+        <label ngbButtonLabel class="col-md-3">
+          <input
+            ngbButton
+            type="radio"
+            [value]="4"
+            class="form-check-input"
+          />Sample subject 12
+        </label>
+      </div>
+    </div>
+    <div class="feedback-div row">
+      <div class="">
+        <label ngbButtonLabel class="col-md-12">
+          Feedback
+          <input class="form-control" type="text" name="" id="" />
+        </label>
+      </div>
+    </div>
+    <div class="footer row">
+      <app-button-yellow
+        class="col-md-2"
+        [buttonConfig]="buttonConfig"
+      ></app-button-yellow>
+    </div>
+  </div>
+</div>

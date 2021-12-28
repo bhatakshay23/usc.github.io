@@ -1,0 +1,49 @@
+@import "../../../assets/styles/color";
+@import "../../../assets/styles/variables";
+
+.create-post-container {
+  border-radius: unset !important;
+  border: 1px solid $gray;
+  p {
+    @include fontProperty($n-medium, 18px, 16px);
+    margin-bottom: 15px;
+  }
+  .text-wrapper {
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 20px;
+      margin-right: 7px;
+    }
+    .text-section {
+      width: 100%;
+      textarea {
+        height: 98px;
+        width: 100%;
+        background-color: $alabaster;
+        border: 1px solid $gallery;
+        border-radius: 8px;
+        color: $dark-gray;
+        @include fontProperty($n-regular, 14px, 16px);
+        padding: 10px 15px;
+      }
+      .action-section {
+        margin-top: 10px;
+        .action {
+          .item {
+            width: 30px;
+            height: 30px;
+            background-color: $alabaster2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            margin-right: 10px;
+            color: $light-gray;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

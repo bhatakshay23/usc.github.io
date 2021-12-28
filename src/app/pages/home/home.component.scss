@@ -1,0 +1,24 @@
+@import "../../../assets/styles/color";
+@import "../../../assets/styles/variables";
+.home-wrapper {
+  margin-top: 37px;
+  .left-component {
+    height: 100vh;
+    position: sticky;
+    top: $nav-height+37px;
+  }
+  .profile-wrapper,
+  .banner-wrapper,
+  .create-post-wrapper,
+  .post-wrapper {
+    margin-bottom: 30px;
+  }
+  .recent-post-label {
+    color: $dark-gray;
+    @include fontProperty($n-semibold, 14px, 17px);
+    margin-bottom: 10px;
+  }
+  .right-section {
+    margin-bottom: 30px;
+  }
+}

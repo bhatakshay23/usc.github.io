@@ -1,0 +1,28 @@
+<div class="group-info-wrapper card">
+  <div class="card-body">
+    <h1 class="title">Racial Equity Training In Schools</h1>
+    <div class="member-info">
+      <i data-feather="users" width="13" height="13"></i>
+      <span>1200 Members</span>
+    </div>
+    <div class="group-members">
+      <div class="group">
+        <div *ngFor="let people of members" class="people">
+          <img src="{{ people }}" alt="memImg" />
+        </div>
+      </div>
+      <div class="status">
+        <div class="checked">
+          <i data-feather="check" width="12" height="12"></i>
+        </div>
+        <span>Joined</span>
+        <i data-feather="chevron-down" width="12" height="12"></i>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="about">
+      <span>{{ aboutTitle }}</span>
+      <p>{{ aboutDesc }}</p>
+    </div>
+  </div>
+</div>
